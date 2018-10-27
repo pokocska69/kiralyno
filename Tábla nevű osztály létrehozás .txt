@@ -12,3 +12,6 @@ using System.IO;
     {
         
         private const char KIRÁLYNÕ = 'K'; 
+	private const int OSZLOPOK = 8;
+	private const char KIRÁLYNÕ = 'K';
+    }
