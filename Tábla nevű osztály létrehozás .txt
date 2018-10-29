@@ -11,7 +11,9 @@ using System.IO;
     class Tabla
     {
         
-        private const char KIR¡LYN’ = 'K'; 
+        private const char KIR√ÅLYN√ï = 'K'; 
 	private const int OSZLOPOK = 8;
-	private const char KIR¡LYN’ = 'K';
+	private const char KIR√ÅLYN√ï = 'K';
+    //2 
+    private char[,] T;
     }
