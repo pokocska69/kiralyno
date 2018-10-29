@@ -16,4 +16,5 @@ using System.IO;
 	private const char KIRÁLYNÕ = 'K';
     //2 
     private char[,] T;
+    private char ÜresCella;
     }
