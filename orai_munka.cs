@@ -120,6 +120,22 @@ namespace Project
                 return ÜresOszlopok;
             }
         }
+        public void Fajlba_iras()
+        {   
+            
+            StreamWriter iro = new StreamWriter("tablak64.txt", true, Encoding.Default);
+            for (int sor = 0; sor < SOROK; sor++)
+            {
+                for (int oszlop = 0; oszlop < OSZLOPOK; oszlop++)
+                {
+                    iro.Write(T[sor, oszlop]);
+                }
+                iro.WriteLine();
+            }
+            iro.WriteLine();
+            iro.Close();
+        }
+    }
         class Program
         {
             static void Main(string[] args)
@@ -130,7 +146,22 @@ namespace Project
                 Console.WriteLine("5.feladat: A királynők megjelenítése:");
                 tabla_peldany.Elhelyez(8);
                 tabla_peldany.Megjelenít();
-                Console.ReadLine();
+               
+                Console.WriteLine("\n6. feladat: Üres oszlopok és sorok száma:");
+                Console.WriteLine("Oszlopok: " + tabla_peldany.ÜresOszlopokSzáma);
+                Console.WriteLine("Sorok: " + tabla_peldany.ÜresSorokSzáma);
+                if (File.Exists("tablak64.txt"))
+                {
+                    File.Delete("tablak64.txt");
+                }
+                for (int kiralyno_szama = 1; kiralyno_szama <= 64; kiralyno_szama++)
+                {
+
+                    Tabla fajlba_tabla = new Tabla('*');
+                    fajlba_tabla.Elhelyez(kiralyno_szama);
+                    fajlba_tabla.Fajlba_iras();
+                }
+                    Console.ReadLine();
                 
             }
         }
